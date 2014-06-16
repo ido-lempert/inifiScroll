@@ -1,0 +1,15 @@
+{
+  "name": "infinity-scroll",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/lib"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "ngInfiniteScroll": "~1.1.2",
+    "jquery": "~2.1.1"
+  }
+}

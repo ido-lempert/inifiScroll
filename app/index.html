@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="bnhpApp">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="lib/angular/angular-csp.css"/>
+</head>
+<body class="ng-cloak" ng-controller="main">
+
+<table role="grid" infinite-scroll="getItems()" infinite-scroll-disabled="infiniteScrollDisabled" tabindex="0" aria-live="polite">
+    <tr role="row">
+        <th>&nbsp;</th>
+        <th role="columnheader">Id</th>
+        <th role="columnheader">Name</th>
+        <th role="columnheader">Created At</th>
+    </tr>
+    <tr ng-repeat="item in items" role="row">
+        <td role="rowheader">{{$index + 1}}</td>
+        <td role="gridcell">{{item.id}}</td>
+        <td role="gridcell">{{item.name}}</td>
+        <td role="gridcell">{{item.createdAt | date}}</td>
+    </tr>
+</table>
+
+<p ng-if="loading" role="region" aria-live="assertive">Loading more items</p>
+
+<script src="lib/jquery/dist/jquery.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+
+<script src="js/app.js"></script>
+</body>
+</html>
